@@ -8,7 +8,7 @@
 .titleContainer {
   display: flex;
   flex-direction: column;
-  width: 100%;
+  /* width: 100%; */
 }
 
 .answerContainer {
@@ -20,7 +20,7 @@
 
 .answerButton {
   margin: 0.5rem;
-  width: 30rem;
+  width: 70%;
   padding: 1rem;
 }
 
@@ -49,4 +49,10 @@
 
 .button {
   padding: 0.5rem;
+}
+
+@media screen and (max-width: 600px) {
+  .h1 {
+    font-size: 0.5rem;
+  }
 }

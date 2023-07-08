@@ -29,8 +29,8 @@ body {
   /* margin: 0; */
   display: flex;
   place-items: center;
-  min-width: 320px;
-  min-height: 100vh;
+  /* min-width: 320px;
+  min-height: 100vh; */
 }
 
 h1 {
@@ -72,5 +72,11 @@ button:focus-visible {
   }
   button {
     background-color: #f9f9f9;
+  }
+} */
+
+/* @media screen and (max-width: 600px) {
+  .h1 {
+    font-size: 0.5rem;
   }
 } */
