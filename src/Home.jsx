@@ -11,24 +11,37 @@ function Home() {
   const questionNumberOptions = ["5", "10", "20", "50"];
   const periodOptions = ["Triassic", "Jurassic", "Cretaceous", "All"];
   const difficultyOptions = ["Easy", "Normal", "Hard"];
+  const [numberSelected, setnumberSelected] = useState(false);
+  const [periodSelected, setperiodSelected] = useState(false);
+  const [difficultySelected, setdifficultySelected] = useState(false);
+  const [alert, setAlert] = useState("");
   const navigate = useNavigate();
 
   function chooseQuestions(e) {
     const number = e.target.value;
     setnoQns(number);
+    setnumberSelected(true);
   }
 
   function choosePeriod(e) {
     const choice = e.target.value;
     setPeriod(choice);
+    setperiodSelected(true);
   }
 
   function chooseDifficulty(e) {
     const choice = e.target.value;
     setDifficulty(choice);
+    setdifficultySelected(true);
   }
   function getReady() {
-    setReady(true);
+    if (
+      periodSelected === true &&
+      numberSelected === true &&
+      difficultySelected === true
+    ) {
+      setReady(true);
+    } else setAlert("Please complete quiz settings. ");
   }
   function startQuiz() {
     navigate("/quiz", { state: { number: noQns, time: period } });
@@ -39,6 +52,7 @@ function Home() {
       startQuiz();
     }
   }, [ready]);
+
   return (
     <>
       <body>
@@ -47,7 +61,8 @@ function Home() {
           <h4>The realest Dino Quiz you can find. </h4>
         </header>
         <section>
-          <h3>Choose Period </h3>
+          <h2 className="alert">{alert}</h2>
+          <h3>Choose Time Period </h3>
           <div className="choiceContainer">
             {periodOptions.map((option, id) => (
               <button

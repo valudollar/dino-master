@@ -22,6 +22,7 @@
   margin: 0.5rem;
   width: 80%;
   padding: 1rem;
+  background-color: #a73a1f;
 }
 
 .nextButton {
@@ -42,17 +43,20 @@
 .green {
   /* background-color: green; */
   /* border: 5px solid rgb(180, 255, 136); */
-  border: 5px solid #81e6ff;
+  border: 5px solid #1b890d;
 }
 
 .red {
-  border: 5px solid #ff9a81;
+  border: 5px solid #e7380c;
 }
 .black {
   background-color: black;
 }
 .blue {
-  border: 5px solid rgb(102, 102, 255);
+  border: 5px solid rgb(0, 0, 0);
+}
+.alert {
+  color: #dc3d16;
 }
 
 .button {
@@ -65,19 +69,10 @@
   justify-content: center;
   align-items: center;
 }
-.periodchoiceButton {
-  margin: 0.5rem;
-  width: 70%;
-  padding: 1rem;
-}
-
-.numberchoiceButton {
-  margin: 0.5rem;
-  width: 70%;
-  padding: 1rem;
-}
 
 .choiceButton {
+  background-color: #a73a1f;
+  color: antiquewhite;
   margin: 0.5rem;
   width: 70%;
   padding: 1rem;

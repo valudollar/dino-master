@@ -1,12 +1,13 @@
 :root {
   font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
   /* line-height: 1.5; */
-  font-weight: 400;
+  font-weight: 500;
 
   /* color-scheme: light dark; */
   /* color: #ff9a81; */
-  color: black;
-  background-color: #804d41;
+  color: #601d0d;
+
+  background-color: #e6a970;
   /* color: rgba(255, 255, 255, 0.87); */
   /* background-color: #242424; */
 
@@ -42,18 +43,22 @@ body {
 h1 {
   font-size: 2.5rem;
   margin: 1rem;
+  color: #601d0d;
 
   /* font-size: 3.2em; */
   /* line-height: 1.1; */
 }
 h4 {
   margin: 0.5rem;
+  color: #a73a1f;
 }
 h2 {
   margin: 0.5rem;
+  color: #a73a1f;
 }
 h3 {
   margin: 0.5rem;
+  color: #601d0d;
 }
 button {
   border-radius: 8px;
@@ -62,7 +67,7 @@ button {
   font-size: 1em;
   font-weight: 500;
   font-family: inherit;
-  background-color: black;
+  background-color: #601d0d;
   color: white;
   cursor: pointer;
   /* min-width: 30rem; */
