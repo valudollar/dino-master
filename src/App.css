@@ -41,11 +41,12 @@
 
 .green {
   /* background-color: green; */
-  border: 5px solid rgb(180, 255, 136);
+  /* border: 5px solid rgb(180, 255, 136); */
+  border: 5px solid #81e6ff;
 }
 
 .red {
-  border: 5px solid rgb(255, 122, 122);
+  border: 5px solid #ff9a81;
 }
 .black {
   background-color: black;
