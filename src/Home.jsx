@@ -57,7 +57,7 @@ function Home() {
     <>
       <body>
         <header className="">
-          <h1>DINO MASTER</h1>
+          <h1 className="">DINO MASTER</h1>
           <h4>The realest Dino Quiz you can find. </h4>
         </header>
         <section>
