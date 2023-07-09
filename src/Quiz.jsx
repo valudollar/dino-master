@@ -1,6 +1,7 @@
 import { useState, useEffect } from "react";
 import { useLocation, useNavigate } from "react-router-dom";
 import { dinos } from "./dinos.js";
+import { dinodb } from "./dinodb.js";
 import "./App.css";
 
 function Quiz() {
@@ -8,7 +9,7 @@ function Quiz() {
   const location = useLocation();
   console.log(location);
 
-  const data = dinos;
+  const data = dinodb;
 
   const [question, setQuestion] = useState("");
   const [selectedOption, setSelectedOption] = useState("");
@@ -46,13 +47,17 @@ function Quiz() {
 
     // const answer = questiondata.answer
     if (topic === "period") {
-      setQuestion("What " + topic + " does the " + name + " belong to?");
+      setQuestion("What period does the " + name + " belong to?");
     } else if (topic === "meaning") {
       setQuestion("What does " + name + " mean?");
-    } else if (topic === "group") {
-      setQuestion("What " + topic + " does the " + name + " belong to?");
-    } else if (topic === "scientific_name") {
-      setQuestion("What is the scientific name of the " + name + " ?");
+    } else if (topic === "type") {
+      setQuestion("What group does the " + name + " belong to?");
+    } else if (topic === "size") {
+      setQuestion("How big was the " + name + "?");
+    } else if (topic === "location") {
+      setQuestion("Where could the " + name + " be found?");
+    } else if (topic === "diet") {
+      setQuestion("What type of diet did the " + name + " have?");
     }
   }
 
@@ -66,20 +71,45 @@ function Quiz() {
         "Early Jurassic",
         "Late Cretaceous",
         "Early Cretaceous",
-        "Late Triassic",
-        "Early Triassic",
+        "Triassic",
       ];
-    } else if (topic === "group") {
-      options = ["Therapod", "Ankylosaurid", "Sauropod", "Stegosaurid"];
-    } else {
+    } else if (topic === "type") {
+      options = [
+        "Therapods",
+        "Ankylosaurids",
+        "Sauropods",
+        "Stegosaurids",
+        "Placodonts",
+        "Prosauropods",
+        "Sauropodomorphs",
+        "Plesiosaurs",
+        "Ichthyosaurs",
+        "Pterosaurs",
+        "Ornithopods",
+        "Nothosaurs",
+        "Thyreophora",
+      ];
+    } else if (topic === "diet") {
+      options = ["Plants", "Fish", "Insects", "Meat", "Omnivorous"];
+    }
+    // else if (topic === "size") {
+    //   //change to function to manipulate number
+    // } else if (topic === "location") {
+    //   //change to locations properly
+    // }
+    else {
       options = data.map((a) => a[topic]);
     }
 
     const ansIndex = options.indexOf(answer);
+    console.log(options, "check 1");
     options.splice(ansIndex, 1);
+    console.log(options, "check 2");
     shuffle(options);
     options = options.slice(0, 3);
+    console.log(options, "check 3");
     options.push(answer);
+    console.log(options, "check 3");
     shuffle(options);
     setOptions(options);
   }
