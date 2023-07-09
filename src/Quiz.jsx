@@ -6,9 +6,9 @@ import "./App.css";
 function Quiz() {
   const navigate = useNavigate();
   const location = useLocation();
+  console.log(location);
 
   const data = dinos;
-  console.log(data, "hello");
 
   const [question, setQuestion] = useState("");
   const [selectedOption, setSelectedOption] = useState("");
@@ -18,7 +18,8 @@ function Quiz() {
   const [score, setScore] = useState(0);
   const [completed, setCompleted] = useState(false);
   const [correct, setCorrect] = useState(-1);
-  const [totalQns, setTotalQns] = useState(parseInt(location.state));
+  const [period, setPeriod] = useState(location.state.time);
+  const [totalQns, setTotalQns] = useState(parseInt(location.state.number));
   const [currentQnNumber, setcurrentQnNumber] = useState(1);
 
   function getDino() {

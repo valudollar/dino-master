@@ -20,7 +20,7 @@
 
 .answerButton {
   margin: 0.5rem;
-  width: 70%;
+  width: 80%;
   padding: 1rem;
 }
 
@@ -40,15 +40,46 @@
 }
 
 .green {
-  background-color: green;
+  /* background-color: green; */
+  border: 5px solid rgb(180, 255, 136);
 }
 
 .red {
-  background-color: red;
+  border: 5px solid rgb(255, 122, 122);
+}
+.black {
+  background-color: black;
+}
+.blue {
+  border: 5px solid rgb(102, 102, 255);
 }
 
 .button {
   padding: 0.5rem;
+}
+
+.choiceContainer {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+.periodchoiceButton {
+  margin: 0.5rem;
+  width: 70%;
+  padding: 1rem;
+}
+
+.numberchoiceButton {
+  margin: 0.5rem;
+  width: 70%;
+  padding: 1rem;
+}
+
+.choiceButton {
+  margin: 0.5rem;
+  width: 70%;
+  padding: 1rem;
 }
 
 @media screen and (max-width: 600px) {
