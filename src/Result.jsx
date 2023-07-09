@@ -44,20 +44,22 @@ function Result() {
 
   return (
     <>
-      <header className="">
-        <h1>DINO MASTER</h1>
-      </header>
-      <section>
-        <h4>
-          Your final score is {finalScore} out of {totalQns}
-        </h4>
-        <h4>You got {percent}% of the questions correct!</h4>
-        <h4>{comment}</h4>
-        <h4>Title: {title}</h4>
-        <a href="/">
-          <button className="button">Try Again</button>
-        </a>
-      </section>
+      <body>
+        <header className="">
+          <h1>DINO MASTER</h1>
+        </header>
+        <section>
+          <h4>
+            Your final score is {finalScore} out of {totalQns}
+          </h4>
+          <h4>You got {percent}% of the questions correct!</h4>
+          <h4>{comment}</h4>
+          <h4>Title: {title}</h4>
+          <a href="/">
+            <button className="button">Try Again</button>
+          </a>
+        </section>
+      </body>
     </>
   );
 }

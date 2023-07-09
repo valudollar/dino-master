@@ -1,5 +1,5 @@
 import { useState, useEffect } from "react";
-
+import "normalize.css";
 import "./App.css";
 import Quiz from "./Quiz";
 import Result from "./Result";

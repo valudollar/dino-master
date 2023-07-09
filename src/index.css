@@ -26,24 +26,38 @@ a:hover {
 } */
 
 body {
-  /* margin: 0; */
   display: flex;
-  place-items: center;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  /* background-color: antiquewhite; */
+  height: 100vh;
+  /* margin: 0; */
+  /* place-items: center; */
   /* min-width: 320px;
   min-height: 100vh; */
 }
 
 h1 {
-  font-size: 3rem;
+  font-size: 2.5rem;
+  margin: 1rem;
 
   /* font-size: 3.2em; */
   /* line-height: 1.1; */
 }
-
+h4 {
+  margin: 0.5rem;
+}
+h2 {
+  margin: 0.5rem;
+}
+h3 {
+  margin: 0.5rem;
+}
 button {
   border-radius: 8px;
   border: 5px solid transparent;
-
+  margin: 1rem;
   font-size: 1em;
   font-weight: 500;
   font-family: inherit;
