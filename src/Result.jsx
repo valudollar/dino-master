@@ -26,7 +26,7 @@ function Result() {
       setTitle("Dino Expert");
     } else if (result <= 80 && result > 50) {
       setComment("Not bad, but how many were guesses?");
-      setTitle("Dino Novice");
+      setTitle("Dino Apprentice");
     } else if (result <= 50 && result > 0) {
       setComment("Did you even try...?");
       setTitle("Dino Noob");
