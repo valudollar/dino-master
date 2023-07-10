@@ -171,49 +171,49 @@ function Quiz() {
   }, []);
 
   return (
-    <>
-      <body>
-        <header className="">
-          <h1>DINO MASTER</h1>
-        </header>
-        <section>
-          <p>
-            Question {currentQnNumber} out of {totalQns}{" "}
-          </p>
-          <p> Score: {score} </p>
-          <p> {question}</p>
-          <div className="answerContainer">
-            {options.map((option, id) => (
-              <button
-                onClick={checkCorrect}
-                //   className={`answerButton ${
-                //     correct !== -1 && option === answer && answered === true
-                //       ? correct
-                //         ? "green"
-                //         : "red"
-                //       : ""
-                //   }`}
-                className={`answerButton ${
-                  answered && option === selectedOption
-                    ? option === answer
-                      ? "green"
-                      : "red"
-                    : ""
-                }`}
-                value={option}
-                key={id}
-                disabled={answered}
-              >
-                {option}
-              </button>
-            ))}
-          </div>
-          <button className="button" onClick={proceed}>
-            Next
-          </button>
-        </section>
-      </body>
-    </>
+    // <>
+    <body>
+      <header className="">
+        <h1>DINO MASTER</h1>
+      </header>
+      <section>
+        <p>
+          Question {currentQnNumber} out of {totalQns}{" "}
+        </p>
+        <p> Score: {score} </p>
+        <p> {question}</p>
+        <div className="answerContainer">
+          {options.map((option, id) => (
+            <button
+              onClick={checkCorrect}
+              //   className={`answerButton ${
+              //     correct !== -1 && option === answer && answered === true
+              //       ? correct
+              //         ? "green"
+              //         : "red"
+              //       : ""
+              //   }`}
+              className={`answerButton ${
+                answered && option === selectedOption
+                  ? option === answer
+                    ? "green"
+                    : "red"
+                  : ""
+              }`}
+              value={option}
+              key={id}
+              disabled={answered}
+            >
+              {option}
+            </button>
+          ))}
+        </div>
+        <button className="button" onClick={proceed}>
+          Next
+        </button>
+      </section>
+    </body>
+    // </>
   );
 }
 
