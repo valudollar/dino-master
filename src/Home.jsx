@@ -103,7 +103,6 @@ function Home() {
             </button>
           ))}
         </div>
-        <h3>Are you ready? </h3>
         <button onClick={getReady} className="button">
           Start
         </button>

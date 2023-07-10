@@ -176,7 +176,7 @@ function Quiz() {
       <header className="">
         <h1>DINO MASTER</h1>
       </header>
-      <section>
+      <section className="contentSection">
         <p>
           Question {currentQnNumber} out of {totalQns}{" "}
         </p>
