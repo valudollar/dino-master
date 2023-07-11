@@ -1,4 +1,5 @@
 import { useLocation, useNavigate } from "react-router-dom";
+import stego from "./assets/stego.gif";
 
 function Home() {
   const navigate = useNavigate();
@@ -17,7 +18,7 @@ function Home() {
           <br /> Well, you don't.
         </h3>
         <div>
-          <img className="gifcontainer" src="src/assets/stego.gif"></img>
+          <img className="gifcontainer" src={stego}></img>
         </div>
         <h3>
           Take the quiz now to find out if you are a Noob, Apprentice, Expert or
