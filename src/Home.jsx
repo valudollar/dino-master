@@ -16,7 +16,9 @@ function Home() {
           You think you know dinosaurs?
           <br /> Well, you don't.
         </h3>
-        <div className="dummyBadge"></div>
+        <div>
+          <img className="gifcontainer" src="src/assets/stego.gif"></img>
+        </div>
         <h3>
           Take the quiz now to find out if you are a Noob, Apprentice, Expert or
           a true Dino Master.
