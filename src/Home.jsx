@@ -30,7 +30,9 @@ function Home() {
           <div className="dummyBadge"></div>
           <div className="dummyBadge"></div>
         </div>
-        <button onClick={play}>Play</button>
+        <button className="button" onClick={play}>
+          Play
+        </button>
       </section>
     </body>
   );

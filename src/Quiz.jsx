@@ -7,10 +7,7 @@ import "./App.css";
 function Quiz() {
   const navigate = useNavigate();
   const location = useLocation();
-  console.log(location);
-
   const data = dinodb;
-
   const [question, setQuestion] = useState("");
   const [selectedOption, setSelectedOption] = useState("");
   const [options, setOptions] = useState([]);
@@ -22,10 +19,38 @@ function Quiz() {
   const [period, setPeriod] = useState(location.state.time);
   const [totalQns, setTotalQns] = useState(parseInt(location.state.number));
   const [currentQnNumber, setcurrentQnNumber] = useState(1);
+  const [dinoset, setDinoSet] = useState([]);
 
-  function getDino() {
-    const random = Math.floor(Math.random() * data.length);
-    const dino = data[random];
+  function getDinoSet() {
+    const triassic = [];
+    const jurassic = [];
+    const cretaceous = [];
+    for (let i = 0; i < data.length; i++) {
+      const dinosaur = data[i];
+      console.log(dinosaur.period, "check");
+      if (dinosaur.period === "Triassic") {
+        triassic.push(dinosaur);
+      } else if (dinosaur.period === "Early Jurassic" || "Late Jurassic") {
+        jurassic.push(dinosaur);
+      } else if (dinosaur.period === "Cretaceous") {
+        cretaceous.push(dinosaur);
+      }
+    }
+    if (period === "Triassic") {
+      return triassic;
+    } else if (period === "Jurassic") {
+      return jurassic;
+    } else if (period === "Cretaceous") {
+      return cretaceous;
+    } else if (period === "All") {
+      return data;
+    }
+  }
+
+  function getDino(obj) {
+    const random = Math.floor(Math.random() * obj.length);
+    const dino = obj[random];
+    console.log(dino, "the dino");
     return dino;
   }
 
@@ -34,11 +59,20 @@ function Quiz() {
     const nameProp = keys.shift();
     let values = Object.values(obj);
     const name = values.shift();
-    const random = Math.floor(Math.random() * keys.length);
+    let random = 0;
+    if (period !== "All") {
+      random = excludePeriod(keys);
+    } else {
+      random = Math.floor(Math.random() * keys.length);
+    }
     const property = keys[random];
     const value = values[random];
     setAnswer(value);
     return { name: name, topic: property, answer: value };
+  }
+  function excludePeriod(keys) {
+    const num = Math.floor(Math.random() * keys.length);
+    return num === 3 ? excludePeriod(keys) : num;
   }
 
   function writeQuestion(questiondata) {
@@ -102,14 +136,10 @@ function Quiz() {
     }
 
     const ansIndex = options.indexOf(answer);
-    console.log(options, "check 1");
     options.splice(ansIndex, 1);
-    console.log(options, "check 2");
     shuffle(options);
     options = options.slice(0, 3);
-    console.log(options, "check 3");
     options.push(answer);
-    console.log(options, "check 3");
     shuffle(options);
     setOptions(options);
   }
@@ -156,7 +186,7 @@ function Quiz() {
 
   function nextQuestion() {
     setcurrentQnNumber(currentQnNumber + 1);
-    const dino = getDino();
+    const dino = getDino(dinoset);
     const qnData = getQuestionData(dino);
     writeQuestion(qnData);
     writeOption(qnData);
@@ -164,14 +194,15 @@ function Quiz() {
     // setCorrect(false);
   }
   useEffect(() => {
-    const dino = getDino();
+    const set = getDinoSet();
+    setDinoSet(set);
+    const dino = getDino(set);
     const qnData = getQuestionData(dino);
     writeQuestion(qnData);
     writeOption(qnData);
   }, []);
 
   return (
-    // <>
     <body>
       <header className="">
         <h1>DINO MASTER</h1>
@@ -213,7 +244,6 @@ function Quiz() {
         </button>
       </section>
     </body>
-    // </>
   );
 }
 

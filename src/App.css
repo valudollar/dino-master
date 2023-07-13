@@ -18,6 +18,8 @@
   width: 18rem;
   padding: 1rem;
   background-color: #a73a1f;
+  border: 1px solid #812610;
+  border-width: 0px 2px 5px 0px;
 }
 
 .badgeContainer {
@@ -47,16 +49,20 @@
 }
 
 .green {
-  border: 5px solid #1b890d;
+  border-color: #003911;
+  background-color: rgb(62, 127, 62);
 }
 
 .red {
-  border: 5px solid #e7380c;
+  border-color: #5b050c !important;
+  background-color: rgb(189, 53, 53) !important;
 }
 
 .blue {
-  border: 5px solid rgb(0, 0, 0);
+  border-color: #05145b !important;
+  background-color: rgb(32, 88, 192) !important;
 }
+
 .alert {
   color: #dc3d16;
 }
@@ -75,6 +81,8 @@
 
 .choiceButton {
   background-color: #a73a1f;
+  border-color: #812610;
+  border-width: 0px 2px 5px 0px;
   color: antiquewhite;
   margin: 0.5rem;
   min-width: 7rem;
