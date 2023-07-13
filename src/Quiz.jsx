@@ -22,6 +22,7 @@ function Quiz() {
   const [currentQnNumber, setcurrentQnNumber] = useState(1);
   const [dinoset, setDinoSet] = useState([]);
 
+  //process data functions
   function getAllSizes() {
     let sizes = [];
     for (let i = 0; i < data.length; i++) {
@@ -36,13 +37,31 @@ function Quiz() {
     console.log(sizes);
   }
 
+  function processLocation() {
+    let allLocations = [];
+    for (let i = 0; i < data.length; i++) {
+      const dinosaur = data[i];
+      const locations = dinosaur.location.split(",");
+      const trimArray = locations.map((element) => {
+        return element.trim();
+      });
+
+      for (let i = 0; i < trimArray.length; i++) {
+        const location = trimArray[i];
+        if (allLocations.includes(location)) {
+          console.log("already included");
+        } else allLocations.push(location);
+      }
+      dinosaur.location = trimArray;
+    }
+  }
+
   function getDinoSet() {
     const triassic = [];
     const jurassic = [];
     const cretaceous = [];
     for (let i = 0; i < data.length; i++) {
       const dinosaur = data[i];
-      console.log(dinosaur.period, "check");
       if (dinosaur.period === "Triassic") {
         triassic.push(dinosaur);
       } else if (dinosaur.period === "Early Jurassic" || "Late Jurassic") {
@@ -65,7 +84,6 @@ function Quiz() {
   function getDino(obj) {
     const random = Math.floor(Math.random() * obj.length);
     const dino = obj[random];
-    console.log(dino, "the dino");
     return dino;
   }
 
@@ -173,21 +191,75 @@ function Quiz() {
         "14m",
         "13m",
       ];
-    }
-    //  else if (topic === "location") {
-    //   //change to locations properly
-    // }
-    else {
+    } else if (topic === "location") {
+      options = [
+        "Italy",
+        "Germany",
+        "China",
+        "Timor",
+        "Indonesia",
+        "Canada",
+        "USA",
+        "Norway",
+        "Japan",
+        "Europe",
+        "North Africa",
+        "Russia",
+        "Romania",
+        "Switzerland",
+        "Spain",
+        "France",
+        "Kyrgyzstan",
+        "Argentina",
+        "Brazil",
+        "South Africa",
+        "England",
+        "Wales",
+        "Lesotho",
+        "Zimbabwe",
+        "Thailand",
+        "North America",
+        "India",
+        "Antartica",
+        "Namibia",
+        "Portugal",
+        "Australia",
+        "Mongolia",
+        "Morocco",
+      ];
+    } else {
       options = data.map((a) => a[topic]);
     }
-
-    const ansIndex = options.indexOf(answer);
-    options.splice(ansIndex, 1);
-    shuffle(options);
-    options = options.slice(0, 3);
-    options.push(answer);
-    shuffle(options);
-    setOptions(options);
+    if (topic === "location") {
+      console.log(answer, "list of locs");
+      console.log(options, "see all");
+      for (let i = 0; i < options.length; i++) {
+        const item = options[i];
+        if (answer.includes(item)) {
+          console.log("one of the answers");
+          options.splice(i, 1);
+        } else {
+          console.log("not an answer");
+        }
+      }
+      console.log(options, "see leftover options");
+      shuffle(options);
+      options = options.slice(0, 3);
+      const randInd = Math.floor(Math.random() * answer.length);
+      const oneAns = answer[randInd];
+      setAnswer(oneAns);
+      options.push(oneAns);
+      shuffle(options);
+      setOptions(options);
+    } else {
+      const ansIndex = options.indexOf(answer);
+      options.splice(ansIndex, 1);
+      shuffle(options);
+      options = options.slice(0, 3);
+      options.push(answer);
+      shuffle(options);
+      setOptions(options);
+    }
   }
 
   function shuffle(array) {
@@ -240,6 +312,7 @@ function Quiz() {
     // setCorrect(false);
   }
   useEffect(() => {
+    processLocation();
     const set = getDinoSet();
     setDinoSet(set);
     const dino = getDino(set);

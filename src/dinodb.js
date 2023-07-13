@@ -307,7 +307,7 @@ export const dinodb = [
   },
   {
     name: "Plateosaurus",
-    location: "Germany, Switzerland and France",
+    location: "Germany, Switzerland, France",
     type: "Prosauropods",
     meaning: "Broad Lizard",
     period: "Triassic",
