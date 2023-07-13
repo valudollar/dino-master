@@ -12,6 +12,7 @@ function Quiz() {
   const [selectedOption, setSelectedOption] = useState("");
   const [options, setOptions] = useState([]);
   const [answer, setAnswer] = useState("");
+  const [difficulty, setDifficulty] = useState(location.state.diff);
   const [answered, setAnswered] = useState(false);
   const [score, setScore] = useState(0);
   const [completed, setCompleted] = useState(false);
@@ -20,6 +21,20 @@ function Quiz() {
   const [totalQns, setTotalQns] = useState(parseInt(location.state.number));
   const [currentQnNumber, setcurrentQnNumber] = useState(1);
   const [dinoset, setDinoSet] = useState([]);
+
+  function getAllSizes() {
+    let sizes = [];
+    for (let i = 0; i < data.length; i++) {
+      const dinosaur = data[i];
+      let values = Object.values(dinosaur);
+      const size = values[6];
+      // console.log(size, "hello");
+      if (sizes.includes(size)) {
+        console.log("already included");
+      } else sizes.push(size);
+    }
+    console.log(sizes);
+  }
 
   function getDinoSet() {
     const triassic = [];
@@ -78,8 +93,6 @@ function Quiz() {
   function writeQuestion(questiondata) {
     const topic = questiondata.topic;
     const name = questiondata.name;
-
-    // const answer = questiondata.answer
     if (topic === "period") {
       setQuestion("What period does the " + name + " belong to?");
     } else if (topic === "meaning") {
@@ -125,10 +138,43 @@ function Quiz() {
       ];
     } else if (topic === "diet") {
       options = ["Plants", "Fish", "Insects", "Meat", "Omnivorous"];
+    } else if (topic === "size") {
+      //optimise by using a fn to generate similar answers
+      options = [
+        "1.5m",
+        "3m",
+        "1m",
+        "15m",
+        "4m",
+        "60cm",
+        "30cm",
+        "5m",
+        "2m",
+        "8m",
+        "5.5m",
+        "1.2m",
+        "2.7m",
+        "2.4m",
+        "6.5m",
+        "9-12m",
+        "9m",
+        "11m",
+        "10m",
+        "6m",
+        "7m",
+        "3.5m",
+        "1.4m",
+        "1.75m",
+        "2.5m",
+        "9.8m",
+        "18m",
+        "4.3m",
+        "21m",
+        "14m",
+        "13m",
+      ];
     }
-    // else if (topic === "size") {
-    //   //change to function to manipulate number
-    // } else if (topic === "location") {
+    //  else if (topic === "location") {
     //   //change to locations properly
     // }
     else {
@@ -208,11 +254,16 @@ function Quiz() {
         <h1>DINO MASTER</h1>
       </header>
       <section className="contentSection">
+        <div className="settingInfoContainer">
+          <p className="settingInfo">Period: {period}</p>
+          <p className="settingInfo">Difficulty: {difficulty}</p>
+        </div>
         <p>
           Question {currentQnNumber} out of {totalQns}{" "}
         </p>
         <p> Score: {score} </p>
-        <p> {question}</p>
+
+        <h3 className="question"> {question}</h3>
         <div className="answerContainer">
           {options.map((option, id) => (
             <button

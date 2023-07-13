@@ -51,6 +51,10 @@ h3 {
   margin: 0.5rem;
   color: #601d0d;
 }
+
+p {
+  margin: 5px;
+}
 button {
   border-radius: 8px;
   border: 1px solid #3d1005;

@@ -44,7 +44,9 @@ function Setting() {
     } else setAlert("Please complete quiz settings. ");
   }
   function startQuiz() {
-    navigate("/quiz", { state: { number: noQns, time: period } });
+    navigate("/quiz", {
+      state: { number: noQns, time: period, diff: difficulty },
+    });
   }
 
   useEffect(() => {

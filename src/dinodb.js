@@ -708,7 +708,7 @@ export const dinodb = [
     meaning: "Big Lizard",
     period: "Middle Jurassic",
     diet: "Meat",
-    size: "9m ",
+    size: "9m",
   },
   {
     name: "Eustreptospondylus",
