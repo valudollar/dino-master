@@ -179,6 +179,9 @@ function Quiz() {
       number + "m",
       number * 5 + "m",
       number * 2 + "m",
+      number * 10 + "m",
+      (number / 2).toFixed() + "m",
+      (number / 5).toFixed() + "m",
       (number / 10).toFixed(1) + "m",
     ];
     console.log(options, "sup");
@@ -196,8 +199,6 @@ function Quiz() {
     } else if (topic === "diet") {
       options = ["Plants", "Fish", "Insects", "Meat", "Omnivorous"];
     } else if (topic === "size") {
-      // generateSizeOptions(answer);
-      //optimise by using a fn to generate similar answers
       options = generateSizeOptions(answer);
     } else if (topic === "location") {
       options = locs;
