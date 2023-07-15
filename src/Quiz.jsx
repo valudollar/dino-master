@@ -23,7 +23,8 @@ function Quiz() {
   const [answered, setAnswered] = useState(false);
   const [score, setScore] = useState(0);
   const [completed, setCompleted] = useState(false);
-  const [correct, setCorrect] = useState(-1);
+  // const [correct, setCorrect] = useState(-1);
+  const [answerResult, setanswerResult] = useState("");
   const [period, setPeriod] = useState(location.state.time);
   const [totalQns, setTotalQns] = useState(parseInt(location.state.number));
   const [currentQnNumber, setcurrentQnNumber] = useState(1);
@@ -245,13 +246,11 @@ function Quiz() {
     setSelectedOption(value);
     setAnswered(true);
     if (value === answer) {
-      console.log("correct!");
-      //   setCorrect(true);
+      setanswerResult("Correct!");
 
       setScore(score + 1);
     } else {
-      console.log("wrong!");
-      //   setCorrect(false);
+      setanswerResult("Wrong! The answer is " + answer + "!");
     }
   }
 
@@ -280,6 +279,7 @@ function Quiz() {
     writeQuestion(qnData);
     writeOption(qnData);
     setAnswered(false);
+    setanswerResult("");
     // setCorrect(false);
   }
   useEffect(() => {
@@ -313,6 +313,7 @@ function Quiz() {
           Question {currentQnNumber} out of {totalQns}{" "}
         </p>
         <h3 className="question"> {question}</h3>
+        <h3 className="answerResult">{answerResult}</h3>
         <div className="answerContainer">
           {options.map((option, id) => (
             <button

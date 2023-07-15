@@ -84,6 +84,9 @@
   margin: 2px;
 }
 
+.answerResult {
+  color: #a73a1f;
+}
 .alert {
   color: #dc3d16;
 }
