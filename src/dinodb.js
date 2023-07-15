@@ -7,7 +7,7 @@ export const dinodb = [
     period: "Triassic",
     size: "1.5m",
     location: "Italy",
-    difficulty: 3,
+    difficulty: "Hard",
   },
   {
     name: "Placodus",
@@ -17,17 +17,17 @@ export const dinodb = [
     period: "Triassic",
     size: "3m",
     location: "Germany",
-    difficulty: 3,
+    difficulty: "Hard",
   },
   // {
-  //   "name": "Cyamodus",
-  //   "diet": "Shellfish",
-  //   "type": "Placodonts",
-  //   "meaning": "",
-  //   "period": "Triassic",
-  //   "size": "1.3m",
-  //   "location": "Germany",
-  //   "difficulty": 3
+  //   name: "Cyamodus",
+  //   diet: "Shellfish",
+  //   type: "Placodonts",
+  //   meaning: "",
+  //   period: "Triassic",
+  //   size: "1.3m",
+  //   location: "Germany",
+  //   difficulty: "Hard",
   // },
   {
     name: "Henodus",
@@ -37,17 +37,17 @@ export const dinodb = [
     period: "Triassic",
     size: "1m",
     location: "Germany",
-    difficulty: 3,
+    difficulty: "Hard",
   },
   // {
-  //   "name": "Cymbospondylus",
-  //   "diet": "Fish",
-  //   "type": "Ichthyosaurs",
-  //   "meaning": "",
-  //   "period": "Triassic",
-  //   "size": "6m",
-  //   "location": "USA, Germany",
-  //   "difficulty": 3
+  //   name: "Cymbospondylus",
+  //   diet: "Fish",
+  //   type: "Ichthyosaurs",
+  //   meaning: "",
+  //   period: "Triassic",
+  //   size: "6m",
+  //   location: "USA, Germany",
+  //   difficulty: "Hard",
   // },
   {
     name: "Mixosaurus",
@@ -57,7 +57,7 @@ export const dinodb = [
     period: "Triassic",
     size: "1m",
     location: "China, Timor, Indonesia, Italy, Canada, USA, Norway",
-    difficulty: 1,
+    difficulty: "Easy",
   },
   {
     name: "Shonisaurus",
@@ -67,7 +67,7 @@ export const dinodb = [
     period: "Triassic",
     size: "15m",
     location: "USA, Canada",
-    difficulty: 2,
+    difficulty: "Normal",
   },
   {
     name: "Utatsusaurus",
@@ -77,7 +77,7 @@ export const dinodb = [
     period: "Triassic",
     size: "3m",
     location: "Japan, Canada",
-    difficulty: 1,
+    difficulty: "Easy",
   },
   {
     name: "Ceresiosaurus",
@@ -87,7 +87,7 @@ export const dinodb = [
     period: "Triassic",
     size: "4m",
     location: "Europe",
-    difficulty: 2,
+    difficulty: "Normal",
   },
   {
     name: "Nothosaurus",
@@ -97,7 +97,7 @@ export const dinodb = [
     period: "Triassic",
     size: "3m",
     location: "Europe, North Africa, Russia, China",
-    difficulty: 3,
+    difficulty: "Hard",
   },
   {
     name: "Pachypleurosaurus",
@@ -107,7 +107,7 @@ export const dinodb = [
     period: "Triassic",
     size: "1m",
     location: "Italy, Romania, Switzerland",
-    difficulty: 3,
+    difficulty: "Hard",
   },
   {
     name: "Lariosaurus",
@@ -117,7 +117,7 @@ export const dinodb = [
     period: "Triassic",
     size: "60cm",
     location: "Spain, France, Italy, Germany, Switzerland, China",
-    difficulty: 2,
+    difficulty: "Normal",
   },
   {
     name: "Sharovipteryx",
@@ -127,7 +127,7 @@ export const dinodb = [
     period: "Triassic",
     size: "30cm",
     location: "Kyrgyzstan",
-    difficulty: 2,
+    difficulty: "Normal",
   },
   {
     name: "Eudiomorphodon",
@@ -137,7 +137,7 @@ export const dinodb = [
     period: "Triassic",
     size: "1m",
     location: "Italy",
-    difficulty: 2,
+    difficulty: "Normal",
   },
   {
     name: "Peteinosaurus",
@@ -147,7 +147,7 @@ export const dinodb = [
     period: "Triassic",
     size: "60cm",
     location: "Italy",
-    difficulty: 3,
+    difficulty: "Hard",
   },
   {
     name: "Preondactylus",
@@ -157,7 +157,7 @@ export const dinodb = [
     period: "Triassic",
     size: "1.5m",
     location: "Italy",
-    difficulty: 2,
+    difficulty: "Normal",
   },
   {
     name: "Eoraptor",
@@ -167,7 +167,7 @@ export const dinodb = [
     period: "Triassic",
     size: "1m",
     location: "Argentina",
-    difficulty: 1,
+    difficulty: "Easy",
   },
   {
     name: "Herrerasaurus",
@@ -177,7 +177,7 @@ export const dinodb = [
     period: "Triassic",
     size: "5m",
     location: "Argentina",
-    difficulty: 1,
+    difficulty: "Easy",
   },
   {
     name: "Chindesaurus",
@@ -187,7 +187,7 @@ export const dinodb = [
     period: "Triassic",
     size: "3m",
     location: "USA",
-    difficulty: 2,
+    difficulty: "Normal",
   },
   {
     name: "Staurikosaurus",
@@ -197,7 +197,7 @@ export const dinodb = [
     period: "Triassic",
     size: "2m",
     location: "Brazil",
-    difficulty: 3,
+    difficulty: "Hard",
   },
   {
     name: "Aliwalia",
@@ -207,7 +207,7 @@ export const dinodb = [
     period: "Triassic",
     size: "8m",
     location: "South Africa",
-    difficulty: 1,
+    difficulty: "Easy",
   },
   {
     name: "Shuvosaurus",
@@ -217,7 +217,7 @@ export const dinodb = [
     period: "Triassic",
     size: "3m",
     location: "USA",
-    difficulty: 2,
+    difficulty: "Normal",
   },
   {
     name: "Gojirasaurus",
@@ -227,7 +227,7 @@ export const dinodb = [
     period: "Triassic",
     size: "5.5m",
     location: "USA",
-    difficulty: 2,
+    difficulty: "Normal",
   },
   {
     name: "Liliensternus",
@@ -237,7 +237,7 @@ export const dinodb = [
     period: "Triassic",
     size: "5m",
     location: "Germany",
-    difficulty: 2,
+    difficulty: "Normal",
   },
   {
     name: "Procompsognathus",
@@ -247,7 +247,7 @@ export const dinodb = [
     period: "Triassic",
     size: "1.2m",
     location: "Germany",
-    difficulty: 1,
+    difficulty: "Easy",
   },
   {
     name: "Camposaurus",
@@ -257,7 +257,7 @@ export const dinodb = [
     period: "Triassic",
     size: "1m",
     location: "USA",
-    difficulty: 3,
+    difficulty: "Hard",
   },
   {
     name: "Coelophysis",
@@ -267,7 +267,7 @@ export const dinodb = [
     period: "Triassic",
     size: "2.7m",
     location: "USA",
-    difficulty: 1,
+    difficulty: "Easy",
   },
   {
     name: "Eucoelophysis",
@@ -277,7 +277,7 @@ export const dinodb = [
     period: "Triassic",
     size: "3m",
     location: "USA",
-    difficulty: 1,
+    difficulty: "Easy",
   },
   {
     name: "Saturnalia",
@@ -287,7 +287,7 @@ export const dinodb = [
     period: "Triassic",
     size: "1.5m",
     location: "Brazil",
-    difficulty: 1,
+    difficulty: "Easy",
   },
   {
     name: "Thecodontosaurus",
@@ -297,7 +297,7 @@ export const dinodb = [
     period: "Triassic",
     size: "2m",
     location: "England, Wales",
-    difficulty: 3,
+    difficulty: "Hard",
   },
   {
     name: "Efraasia",
@@ -307,7 +307,7 @@ export const dinodb = [
     period: "Triassic",
     size: "2.4m",
     location: "Germany",
-    difficulty: 3,
+    difficulty: "Hard",
   },
   {
     name: "Sellosaurus",
@@ -317,7 +317,7 @@ export const dinodb = [
     period: "Triassic",
     size: "6.5m",
     location: "Germany",
-    difficulty: 2,
+    difficulty: "Normal",
   },
   {
     name: "Euskelosaurus",
@@ -327,7 +327,7 @@ export const dinodb = [
     period: "Triassic",
     size: "9-12m",
     location: "Lesotho, South Africa, Zimbabwe",
-    difficulty: 3,
+    difficulty: "Hard",
   },
   {
     name: "Blikanansaurus",
@@ -337,7 +337,7 @@ export const dinodb = [
     period: "Triassic",
     size: "5m",
     location: "Lesotho",
-    difficulty: 2,
+    difficulty: "Normal",
   },
   {
     name: "Plateosaurus",
@@ -347,7 +347,7 @@ export const dinodb = [
     period: "Triassic",
     size: "8m",
     location: "Germany, Switzerland and France",
-    difficulty: 2,
+    difficulty: "Normal",
   },
   {
     name: "Lessemsaurus",
@@ -357,7 +357,7 @@ export const dinodb = [
     period: "Triassic",
     size: "9m",
     location: "Argentina",
-    difficulty: 2,
+    difficulty: "Normal",
   },
   {
     name: "Riojasaurus",
@@ -367,7 +367,7 @@ export const dinodb = [
     period: "Triassic",
     size: "11m",
     location: "Argentina",
-    difficulty: 2,
+    difficulty: "Normal",
   },
   {
     name: "Camelotia",
@@ -377,7 +377,7 @@ export const dinodb = [
     period: "Triassic",
     size: "9m",
     location: "England",
-    difficulty: 1,
+    difficulty: "Easy",
   },
   {
     name: "Melanorosaurus",
@@ -387,7 +387,7 @@ export const dinodb = [
     period: "Triassic",
     size: "15m",
     location: "South Africa",
-    difficulty: 2,
+    difficulty: "Normal",
   },
   {
     name: "Pisanosaurus",
@@ -397,7 +397,7 @@ export const dinodb = [
     period: "Triassic",
     size: "1m",
     location: "Argentina",
-    difficulty: 2,
+    difficulty: "Normal",
   },
   {
     name: "Technosaurus",
@@ -407,7 +407,7 @@ export const dinodb = [
     period: "Triassic",
     size: "1m",
     location: "USA",
-    difficulty: 2,
+    difficulty: "Normal",
   },
   {
     name: "Antetonitrus",
@@ -417,7 +417,7 @@ export const dinodb = [
     period: "Triassic",
     size: "10m",
     location: "South Africa",
-    difficulty: 3,
+    difficulty: "Hard",
   },
   {
     name: "Isanosaurus",
@@ -427,7 +427,7 @@ export const dinodb = [
     period: "Triassic",
     size: "6m",
     location: "Thailand",
-    difficulty: 2,
+    difficulty: "Normal",
   },
   {
     name: "Temnodontosaurus",
@@ -437,7 +437,7 @@ export const dinodb = [
     period: "Early Jurassic",
     size: "10m",
     location: "England, Germany",
-    difficulty: 3,
+    difficulty: "Hard",
   },
   {
     name: "Ichthyosaurus",
@@ -447,7 +447,7 @@ export const dinodb = [
     period: "Early Jurassic",
     size: "2m",
     location: "England",
-    difficulty: 1,
+    difficulty: "Easy",
   },
   {
     name: "Excalibosaurus",
@@ -457,7 +457,7 @@ export const dinodb = [
     period: "Early Jurassic",
     size: "7m",
     location: "England",
-    difficulty: 1,
+    difficulty: "Easy",
   },
   {
     name: "Opthalmosaurus",
@@ -467,7 +467,7 @@ export const dinodb = [
     period: "Early Jurassic",
     size: "3.5m",
     location: "England, France, North America, Canada, Argentina",
-    difficulty: 3,
+    difficulty: "Hard",
   },
   {
     name: "Macroplata",
@@ -477,7 +477,7 @@ export const dinodb = [
     period: "Early Jurassic",
     size: "5m",
     location: "Europe",
-    difficulty: 2,
+    difficulty: "Normal",
   },
   {
     name: "Rhomaleosaurus",
@@ -487,7 +487,7 @@ export const dinodb = [
     period: "Early Jurassic",
     size: "6m",
     location: "England, Germany",
-    difficulty: 3,
+    difficulty: "Hard",
   },
   {
     name: "Attenborosaurus",
@@ -497,7 +497,7 @@ export const dinodb = [
     period: "Early Jurassic",
     size: "5m",
     location: "Europe",
-    difficulty: 1,
+    difficulty: "Easy",
   },
   {
     name: "Plesiosaurus",
@@ -507,7 +507,7 @@ export const dinodb = [
     period: "Early Jurassic",
     size: "3.5m",
     location: "Europe",
-    difficulty: 1,
+    difficulty: "Easy",
   },
   {
     name: "Dimorphodon",
@@ -517,7 +517,7 @@ export const dinodb = [
     period: "Early Jurassic",
     size: "1.4m",
     location: "England",
-    difficulty: 1,
+    difficulty: "Easy",
   },
   {
     name: "Campylognathoides",
@@ -527,7 +527,7 @@ export const dinodb = [
     period: "Early Jurassic",
     size: "1.75m",
     location: "Germany, India",
-    difficulty: 3,
+    difficulty: "Hard",
   },
   {
     name: "Dorygnathus",
@@ -537,7 +537,7 @@ export const dinodb = [
     period: "Early Jurassic",
     size: "1m",
     location: "Germany",
-    difficulty: 3,
+    difficulty: "Hard",
   },
   {
     name: "Parapsicephalus",
@@ -547,7 +547,7 @@ export const dinodb = [
     period: "Early Jurassic",
     size: "1m",
     location: "England, Germany",
-    difficulty: 3,
+    difficulty: "Hard",
   },
   {
     name: "Dilophosaurus",
@@ -557,7 +557,7 @@ export const dinodb = [
     period: "Early Jurassic",
     size: "6m",
     location: "USA, China",
-    difficulty: 1,
+    difficulty: "Easy",
   },
   {
     name: "Segisaurus",
@@ -567,7 +567,7 @@ export const dinodb = [
     period: "Early Jurassic",
     size: "1m",
     location: "USA",
-    difficulty: 2,
+    difficulty: "Normal",
   },
   {
     name: "Podokesaurus",
@@ -577,7 +577,7 @@ export const dinodb = [
     period: "Early Jurassic",
     size: "1m",
     location: "USA",
-    difficulty: 3,
+    difficulty: "Hard",
   },
   {
     name: "Syntarsus",
@@ -587,7 +587,7 @@ export const dinodb = [
     period: "Early Jurassic",
     size: "2m",
     location: "Zimbabwe",
-    difficulty: 3,
+    difficulty: "Hard",
   },
   {
     name: "Sarcosaurus",
@@ -597,7 +597,7 @@ export const dinodb = [
     period: "Early Jurassic",
     size: "3.5m",
     location: "England",
-    difficulty: 3,
+    difficulty: "Hard",
   },
   {
     name: "Saltriosaurus",
@@ -607,7 +607,7 @@ export const dinodb = [
     period: "Early Jurassic",
     size: "8m",
     location: "Italy",
-    difficulty: 2,
+    difficulty: "Normal",
   },
   {
     name: "Cryolophosaurus",
@@ -617,7 +617,7 @@ export const dinodb = [
     period: "Early Jurassic",
     size: "6m",
     location: "Antartica",
-    difficulty: 3,
+    difficulty: "Hard",
   },
   {
     name: "Anchisaurus",
@@ -627,7 +627,7 @@ export const dinodb = [
     period: "Early Jurassic",
     size: "2.5m",
     location: "USA",
-    difficulty: 3,
+    difficulty: "Hard",
   },
   {
     name: "Jingshanosaurus",
@@ -637,7 +637,7 @@ export const dinodb = [
     period: "Early Jurassic",
     size: "9.8m",
     location: "China",
-    difficulty: 3,
+    difficulty: "Hard",
   },
   {
     name: "Yunnanosaurus",
@@ -647,7 +647,7 @@ export const dinodb = [
     period: "Early Jurassic",
     size: "7m",
     location: "China",
-    difficulty: 2,
+    difficulty: "Normal",
   },
   {
     name: "Massospondylus",
@@ -657,7 +657,7 @@ export const dinodb = [
     period: "Early Jurassic",
     size: "4m",
     location: "Lesotho, Namibia, South Africa, Zimbabwe",
-    difficulty: 3,
+    difficulty: "Hard",
   },
   {
     name: "Kunmingosaurus",
@@ -667,7 +667,7 @@ export const dinodb = [
     period: "Early Jurassic",
     size: "11m",
     location: "China",
-    difficulty: 1,
+    difficulty: "Easy",
   },
   {
     name: "Kotasaurus",
@@ -677,7 +677,7 @@ export const dinodb = [
     period: "Early Jurassic",
     size: "9m",
     location: "India",
-    difficulty: 2,
+    difficulty: "Normal",
   },
   {
     name: "Vulcanodon",
@@ -687,7 +687,7 @@ export const dinodb = [
     period: "Early Jurassic",
     size: "6.5m",
     location: "Zimbabwe",
-    difficulty: null,
+    difficulty: "Normal",
   },
   {
     name: "Barapasaurus",
@@ -697,7 +697,7 @@ export const dinodb = [
     period: "Early Jurassic",
     size: "18m",
     location: "India",
-    difficulty: 3,
+    difficulty: "Hard",
   },
   {
     name: "Lesothosaurus",
@@ -707,7 +707,7 @@ export const dinodb = [
     period: "Early Jurassic",
     size: "1m",
     location: "Lesotho, South Africa",
-    difficulty: 1,
+    difficulty: "Easy",
   },
   {
     name: "Abrictosaurus",
@@ -717,7 +717,7 @@ export const dinodb = [
     period: "Early Jurassic",
     size: "1.2m",
     location: "Lesotho, South Africa",
-    difficulty: 3,
+    difficulty: "Hard",
   },
   {
     name: "Lanasaurus",
@@ -727,7 +727,7 @@ export const dinodb = [
     period: "Early Jurassic",
     size: "1.2m",
     location: "South Africa",
-    difficulty: 3,
+    difficulty: "Hard",
   },
   {
     name: "Heterodontosaurus",
@@ -737,7 +737,7 @@ export const dinodb = [
     period: "Early Jurassic",
     size: "1m",
     location: "South Africa",
-    difficulty: 3,
+    difficulty: "Hard",
   },
   {
     name: "Scutellosaurus",
@@ -747,7 +747,7 @@ export const dinodb = [
     period: "Early Jurassic",
     size: "1.2m",
     location: "USA",
-    difficulty: 3,
+    difficulty: "Hard",
   },
   {
     name: "Scelidosaurus",
@@ -757,7 +757,7 @@ export const dinodb = [
     period: "Early Jurassic",
     size: "4m",
     location: "England",
-    difficulty: 3,
+    difficulty: "Hard",
   },
   {
     name: "Emausaurus",
@@ -767,7 +767,7 @@ export const dinodb = [
     period: "Early Jurassic",
     size: "2m",
     location: "Germany",
-    difficulty: 3,
+    difficulty: "Hard",
   },
   {
     name: "Lusitanosaurus",
@@ -777,7 +777,7 @@ export const dinodb = [
     period: "Early Jurassic",
     size: "4m",
     location: "Portugal",
-    difficulty: 2,
+    difficulty: "Normal",
   },
   {
     name: "Megalosaurus",
@@ -787,7 +787,7 @@ export const dinodb = [
     period: "Middle Jurassic",
     size: "9m ",
     location: "France, Portugal",
-    difficulty: 1,
+    difficulty: "Easy",
   },
   {
     name: "Eustreptospondylus",
@@ -797,7 +797,7 @@ export const dinodb = [
     period: "Middle Jurassic",
     size: "9m",
     location: "England",
-    difficulty: 3,
+    difficulty: "Hard",
   },
   {
     name: "Poekilopleuron",
@@ -807,7 +807,7 @@ export const dinodb = [
     period: "Middle Jurassic",
     size: "9m",
     location: "France",
-    difficulty: 3,
+    difficulty: "Hard",
   },
   {
     name: "Magnosaurus",
@@ -817,7 +817,7 @@ export const dinodb = [
     period: "Middle Jurassic",
     size: "4m",
     location: "England",
-    difficulty: 2,
+    difficulty: "Normal",
   },
   {
     name: "Ozraptor",
@@ -827,7 +827,7 @@ export const dinodb = [
     period: "Middle Jurassic",
     size: "3m",
     location: "Australia",
-    difficulty: 1,
+    difficulty: "Easy",
   },
   {
     name: "Kaijiangosaurus",
@@ -837,7 +837,7 @@ export const dinodb = [
     period: "Middle Jurassic",
     size: "6m",
     location: "China",
-    difficulty: 2,
+    difficulty: "Normal",
   },
   {
     name: "Piatnitzkysaurus",
@@ -847,7 +847,7 @@ export const dinodb = [
     period: "Middle Jurassic",
     size: "4.3m",
     location: "Argentina",
-    difficulty: 2,
+    difficulty: "Normal",
   },
   {
     name: "Proceratosaurus",
@@ -857,7 +857,7 @@ export const dinodb = [
     period: "Middle Jurassic",
     size: "2m",
     location: "England",
-    difficulty: 1,
+    difficulty: "Easy",
   },
   {
     name: "Omeisaurus",
@@ -867,7 +867,7 @@ export const dinodb = [
     period: "Middle Jurassic",
     size: "15m",
     location: "China",
-    difficulty: 2,
+    difficulty: "Normal",
   },
   {
     name: "Shunosaurus",
@@ -877,7 +877,7 @@ export const dinodb = [
     period: "Middle Jurassic",
     size: "9m",
     location: "China",
-    difficulty: 3,
+    difficulty: "Hard",
   },
   {
     name: "Mamenchisaurus",
@@ -887,7 +887,7 @@ export const dinodb = [
     period: "Middle Jurassic",
     size: "21m",
     location: "China, Mongolia",
-    difficulty: 2,
+    difficulty: "Normal",
   },
   {
     name: "Datousaurus",
@@ -897,7 +897,7 @@ export const dinodb = [
     period: "Middle Jurassic",
     size: "15m",
     location: "China",
-    difficulty: 3,
+    difficulty: "Hard",
   },
   {
     name: "Cetiosaurus",
@@ -907,7 +907,7 @@ export const dinodb = [
     period: "Middle Jurassic",
     size: "14m",
     location: "England, Portugal, Morocco",
-    difficulty: 3,
+    difficulty: "Hard",
   },
   {
     name: "Amygdalodon",
@@ -917,7 +917,7 @@ export const dinodb = [
     period: "Middle Jurassic",
     size: "13m",
     location: "Argentina",
-    difficulty: 1,
+    difficulty: "Easy",
   },
   {
     name: "Patagosaurus",
@@ -927,7 +927,7 @@ export const dinodb = [
     period: "Middle Jurassic",
     size: "18m",
     location: "Argentina",
-    difficulty: 2,
+    difficulty: "Normal",
   },
   {
     name: "Yandusaurus",
@@ -937,7 +937,7 @@ export const dinodb = [
     period: "Middle Jurassic",
     size: "1.5m",
     location: "China",
-    difficulty: 2,
+    difficulty: "Normal",
   },
   {
     name: "Agilisaurus",
@@ -947,7 +947,7 @@ export const dinodb = [
     period: "Middle Jurassic",
     size: "1.2m",
     location: "China",
-    difficulty: 1,
+    difficulty: "Easy",
   },
   {
     name: "Xiaosaurus",
@@ -957,7 +957,7 @@ export const dinodb = [
     period: "Middle Jurassic",
     size: "1m",
     location: "China",
-    difficulty: 2,
+    difficulty: "Normal",
   },
   {
     name: "Alocodon",
@@ -967,6 +967,6 @@ export const dinodb = [
     period: "Middle Jurassic",
     size: "1m",
     location: "Portugal",
-    difficulty: 3,
+    difficulty: "Hard",
   },
 ];

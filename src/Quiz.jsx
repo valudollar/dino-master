@@ -38,6 +38,10 @@ function Quiz() {
     console.log(sizes);
   }
 
+  // function processDinoset() {
+  //   const periodset = processPeriod();
+  //   return processDifficulty(periodset);
+  // }
   function processLocation() {
     let allLocations = [];
     for (let i = 0; i < data.length; i++) {
@@ -57,7 +61,7 @@ function Quiz() {
     }
   }
 
-  function getDinoSet() {
+  function processPeriod() {
     const triassic = [];
     const jurassic = [];
     const cretaceous = [];
@@ -80,6 +84,22 @@ function Quiz() {
     } else if (period === "All") {
       return data;
     }
+  }
+
+  function processDifficulty(array) {
+    let finalset = [];
+    console.log("did it pass?");
+    for (let i = 0; i < array.length; i++) {
+      const dinosaur = array[i];
+      if (dinosaur.difficulty === difficulty) {
+        console.log("correct difficulty");
+        finalset.push(dinosaur);
+      } else if (dinosaur.difficulty != difficulty) {
+        console.log("excluded");
+      }
+    }
+
+    return finalset;
   }
 
   function getDino(obj) {
@@ -327,11 +347,12 @@ function Quiz() {
   }
   useEffect(() => {
     processLocation();
-    console.log(data, "hello");
-    const set = getDinoSet();
-    console.log(set, "hello");
-    setDinoSet(set);
-    const dino = getDino(set);
+    const periodset = processPeriod();
+    console.log(periodset, "hello");
+    const difficultyset = processDifficulty(periodset);
+    console.log(difficultyset, "hello");
+    setDinoSet(difficultyset);
+    const dino = getDino(difficultyset);
     console.log(dino, "hello");
     const qnData = getQuestionData(dino);
 
