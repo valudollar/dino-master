@@ -38,10 +38,12 @@ function Quiz() {
     console.log(sizes);
   }
 
-  // function processDinoset() {
-  //   const periodset = processPeriod();
-  //   return processDifficulty(periodset);
-  // }
+  function processDinoset() {
+    processLocation();
+    const periodset = processPeriod();
+    const finalset = processDifficulty(periodset);
+    return finalset;
+  }
   function processLocation() {
     let allLocations = [];
     for (let i = 0; i < data.length; i++) {
@@ -88,17 +90,24 @@ function Quiz() {
 
   function processDifficulty(array) {
     let finalset = [];
-    console.log("did it pass?");
     for (let i = 0; i < array.length; i++) {
       const dinosaur = array[i];
-      if (dinosaur.difficulty === difficulty) {
-        console.log("correct difficulty");
+      if (difficulty === "Easy") {
+        if (dinosaur.difficulty === "Easy") {
+          finalset.push(dinosaur);
+        }
+      } else if (difficulty === "Normal") {
+        if (
+          dinosaur.difficulty === "Easy" ||
+          dinosaur.difficulty === "Normal"
+        ) {
+          finalset.push(dinosaur);
+        }
+      } else if (difficulty === "Hard") {
         finalset.push(dinosaur);
-      } else if (dinosaur.difficulty != difficulty) {
-        console.log("excluded");
       }
     }
-
+    console.log(finalset, "check set");
     return finalset;
   }
 
@@ -263,24 +272,18 @@ function Quiz() {
       options = data.map((a) => a[topic]);
     }
     if (topic === "location") {
-      console.log(answer, "list of locs");
-      console.log(options, "see all");
       for (let i = 0; i < options.length; i++) {
         const item = options[i];
         if (answer.includes(item)) {
-          console.log(item, "an answer");
           options.splice(i, 1);
         } else {
-          console.log("not an answer");
         }
       }
-      console.log(options, "see leftover options");
+
       shuffle(options);
       options = options.slice(0, 3);
       const randInd = Math.floor(Math.random() * answer.length);
-      console.log(answer, "list of ans");
       const oneAns = answer[randInd];
-      console.log(oneAns, "hello");
       setAnswer(oneAns);
       options.push(oneAns);
       shuffle(options);
@@ -346,16 +349,10 @@ function Quiz() {
     // setCorrect(false);
   }
   useEffect(() => {
-    processLocation();
-    const periodset = processPeriod();
-    console.log(periodset, "hello");
-    const difficultyset = processDifficulty(periodset);
-    console.log(difficultyset, "hello");
-    setDinoSet(difficultyset);
-    const dino = getDino(difficultyset);
-    console.log(dino, "hello");
+    const set = processDinoset();
+    setDinoSet(set);
+    const dino = getDino(set);
     const qnData = getQuestionData(dino);
-
     writeQuestion(qnData);
     writeOption(qnData);
   }, []);
