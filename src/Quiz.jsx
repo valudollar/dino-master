@@ -11,13 +11,13 @@ import "./App.css";
 function Quiz() {
   const navigate = useNavigate();
   const location = useLocation();
-  const data = dinodb;
+  let data = dinodb;
+  const peds = periodops;
   const types = typeops;
   const locs = locationops;
-  const peds = periodops;
   const [question, setQuestion] = useState("");
   const [selectedOption, setSelectedOption] = useState("");
-  const [options, setOptions] = useState([]);
+  const [qnoptions, setOptions] = useState([]);
   const [answer, setAnswer] = useState("");
   const [difficulty, setDifficulty] = useState(location.state.diff);
   const [answered, setAnswered] = useState(false);
@@ -62,7 +62,6 @@ function Quiz() {
       for (let i = 0; i < trimArray.length; i++) {
         const location = trimArray[i];
         if (allLocations.includes(location)) {
-          console.log("already included");
         } else allLocations.push(location);
       }
       dinosaur.location = trimArray;
@@ -173,19 +172,15 @@ function Quiz() {
   }
 
   function generateSizeOptions(correctsize) {
-    console.log(correctsize, "hello");
     const number = parseFloat(correctsize.slice(0, -1));
-    console.log(number, "hello");
     const options = [
       number + "m",
       number * 5 + "m",
       number * 2 + "m",
       number * 10 + "m",
-      (number / 2).toFixed() + "m",
-      (number / 5).toFixed() + "m",
+      (number / 2).toFixed(1) + "m",
       (number / 10).toFixed(1) + "m",
     ];
-    console.log(options, "sup");
     return options;
   }
 
@@ -194,9 +189,9 @@ function Quiz() {
     const topic = questiondata.topic;
     let options = [];
     if (topic === "period") {
-      options = peds;
+      options = [...peds];
     } else if (topic === "type") {
-      options = types;
+      options = [...types];
     } else if (topic === "diet") {
       options = ["Plants", "Fish", "Insects", "Meat", "Omnivorous"];
     } else if (topic === "size") {
@@ -315,7 +310,7 @@ function Quiz() {
         <h3 className="question"> {question}</h3>
         <h3 className="answerResult">{answerResult}</h3>
         <div className="answerContainer">
-          {options.map((option, id) => (
+          {qnoptions.map((option, id) => (
             <button
               onClick={checkCorrect}
               //   className={`answerButton ${
