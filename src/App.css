@@ -1,9 +1,18 @@
 #root {
   text-align: center;
   min-height: 100vh;
+  background-color: #e6a970;
   overflow-y: scroll;
 }
+.itemContainer {
+}
+.badgeText {
+  margin: 0rem;
+}
 
+.homeText {
+  margin: 0rem;
+}
 .answerContainer {
   display: flex;
   flex-direction: column;
@@ -23,7 +32,6 @@
   margin: 1rem;
 }
 
-/* check */
 .answerButton {
   margin: 0.5rem;
   min-width: fit-content;
@@ -40,6 +48,8 @@
   flex-wrap: wrap;
   align-items: center;
   justify-content: center;
+  margin-bottom: 1rem;
+  margin-top: 0rem;
 }
 .dummyBadge {
   background-color: #a73a1f;
@@ -52,7 +62,7 @@
 .gifcontainer {
   height: 10rem;
   width: 10rem;
-  margin: 0.5rem;
+  margin: 0rem;
   border-radius: 50%;
 }
 .logo {
