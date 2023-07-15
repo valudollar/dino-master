@@ -248,7 +248,7 @@ function Quiz() {
       for (let i = 0; i < options.length; i++) {
         const item = options[i];
         if (answer.includes(item)) {
-          console.log("one of the answers");
+          console.log(item, "an answer");
           options.splice(i, 1);
         } else {
           console.log("not an answer");
@@ -258,7 +258,9 @@ function Quiz() {
       shuffle(options);
       options = options.slice(0, 3);
       const randInd = Math.floor(Math.random() * answer.length);
+      console.log(answer, "list of ans");
       const oneAns = answer[randInd];
+      console.log(oneAns, "hello");
       setAnswer(oneAns);
       options.push(oneAns);
       shuffle(options);
@@ -324,7 +326,7 @@ function Quiz() {
     // setCorrect(false);
   }
   useEffect(() => {
-    // processLocation();
+    processLocation();
     console.log(data, "hello");
     const set = getDinoSet();
     console.log(set, "hello");
