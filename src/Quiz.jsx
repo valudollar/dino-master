@@ -2,6 +2,7 @@ import { useState, useEffect } from "react";
 import { useLocation, useNavigate } from "react-router-dom";
 import { dinos } from "./dinos.js";
 import { dinodb } from "./dinodb.js";
+import { VscDebugRestart } from "react-icons/vsc";
 import "./App.css";
 
 function Quiz() {
@@ -328,14 +329,20 @@ function Quiz() {
       </header>
       <section className="contentSection">
         <div className="settingInfoContainer">
-          <p className="settingInfo">Period: {period}</p>
-          <p className="settingInfo">Difficulty: {difficulty}</p>
+          <p className="period">Period: {period}</p>
+          <p className="difficulty">Difficulty: {difficulty}</p>
+        </div>
+        <div className="settingInfoContainer">
+          <p className="score"> Score: {score} </p>{" "}
+          <a href="/">
+            <button className="restart">
+              <VscDebugRestart />
+            </button>
+          </a>
         </div>
         <p>
           Question {currentQnNumber} out of {totalQns}{" "}
         </p>
-        <p> Score: {score} </p>
-
         <h3 className="question"> {question}</h3>
         <div className="answerContainer">
           {options.map((option, id) => (
