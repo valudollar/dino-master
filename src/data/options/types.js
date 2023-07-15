@@ -1,0 +1,15 @@
+export const typeops = [
+  "Therapods",
+  "Ankylosaurids",
+  "Sauropods",
+  "Stegosaurids",
+  "Placodonts",
+  "Prosauropods",
+  "Sauropodomorphs",
+  "Plesiosaurs",
+  "Ichthyosaurs",
+  "Pterosaurs",
+  "Ornithopods",
+  "Nothosaurs",
+  "Thyreophora",
+];

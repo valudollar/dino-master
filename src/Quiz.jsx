@@ -2,13 +2,19 @@ import { useState, useEffect } from "react";
 import { useLocation, useNavigate } from "react-router-dom";
 import { dinos } from "./dinos.js";
 import { dinodb } from "./dinodb.js";
+import { typeops } from "./data/options/types.js";
+import { locationops } from "./data/options/locations.js";
 import { VscDebugRestart } from "react-icons/vsc";
+import { periodops } from "./data/options/periods.js";
 import "./App.css";
 
 function Quiz() {
   const navigate = useNavigate();
   const location = useLocation();
   const data = dinodb;
+  const types = typeops;
+  const locs = locationops;
+  const peds = periodops;
   const [question, setQuestion] = useState("");
   const [selectedOption, setSelectedOption] = useState("");
   const [options, setOptions] = useState([]);
@@ -32,7 +38,6 @@ function Quiz() {
       const size = values[6];
       // console.log(size, "hello");
       if (sizes.includes(size)) {
-        console.log("already included");
       } else sizes.push(size);
     }
     console.log(sizes);
@@ -139,7 +144,6 @@ function Quiz() {
     }
     const property = keys[random];
     const value = values[random];
-    console.log("values", value);
     setAnswer(value);
     return { name: name, topic: property, answer: value };
   }
@@ -167,107 +171,36 @@ function Quiz() {
     }
   }
 
+  function generateSizeOptions(correctsize) {
+    console.log(correctsize, "hello");
+    const number = parseFloat(correctsize.slice(0, -1));
+    console.log(number, "hello");
+    const options = [
+      number + "m",
+      number * 5 + "m",
+      number * 2 + "m",
+      (number / 10).toFixed(1) + "m",
+    ];
+    console.log(options, "sup");
+    return options;
+  }
+
   function writeOption(questiondata) {
     const answer = questiondata.answer;
     const topic = questiondata.topic;
     let options = [];
     if (topic === "period") {
-      options = [
-        "Late Jurassic",
-        "Early Jurassic",
-        "Late Cretaceous",
-        "Early Cretaceous",
-        "Triassic",
-      ];
+      options = peds;
     } else if (topic === "type") {
-      options = [
-        "Therapods",
-        "Ankylosaurids",
-        "Sauropods",
-        "Stegosaurids",
-        "Placodonts",
-        "Prosauropods",
-        "Sauropodomorphs",
-        "Plesiosaurs",
-        "Ichthyosaurs",
-        "Pterosaurs",
-        "Ornithopods",
-        "Nothosaurs",
-        "Thyreophora",
-      ];
+      options = types;
     } else if (topic === "diet") {
       options = ["Plants", "Fish", "Insects", "Meat", "Omnivorous"];
     } else if (topic === "size") {
+      // generateSizeOptions(answer);
       //optimise by using a fn to generate similar answers
-      options = [
-        "1.5m",
-        "3m",
-        "1m",
-        "15m",
-        "4m",
-        "60cm",
-        "30cm",
-        "5m",
-        "2m",
-        "8m",
-        "5.5m",
-        "1.2m",
-        "2.7m",
-        "2.4m",
-        "6.5m",
-        "9-12m",
-        "9m",
-        "11m",
-        "10m",
-        "6m",
-        "7m",
-        "3.5m",
-        "1.4m",
-        "1.75m",
-        "2.5m",
-        "9.8m",
-        "18m",
-        "4.3m",
-        "21m",
-        "14m",
-        "13m",
-      ];
+      options = generateSizeOptions(answer);
     } else if (topic === "location") {
-      options = [
-        "Italy",
-        "Germany",
-        "China",
-        "Timor",
-        "Indonesia",
-        "Canada",
-        "USA",
-        "Norway",
-        "Japan",
-        "Europe",
-        "North Africa",
-        "Russia",
-        "Romania",
-        "Switzerland",
-        "Spain",
-        "France",
-        "Kyrgyzstan",
-        "Argentina",
-        "Brazil",
-        "South Africa",
-        "England",
-        "Wales",
-        "Lesotho",
-        "Zimbabwe",
-        "Thailand",
-        "North America",
-        "India",
-        "Antartica",
-        "Namibia",
-        "Portugal",
-        "Australia",
-        "Mongolia",
-        "Morocco",
-      ];
+      options = locs;
     } else {
       options = data.map((a) => a[topic]);
     }
