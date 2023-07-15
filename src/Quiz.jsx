@@ -94,19 +94,30 @@ function Quiz() {
     let values = Object.values(obj);
     const name = values.shift();
     let random = 0;
+    let keyIndexes = 0;
+    if (difficulty === "Easy") {
+      keyIndexes = 4;
+    } else if (difficulty === "Normal") {
+      keyIndexes = 5;
+    } else if (difficulty === "Hard") {
+      keyIndexes = 6;
+    }
+
     if (period !== "All") {
-      random = excludePeriod(keys);
+      random = excludePeriod(keyIndexes);
     } else {
-      random = Math.floor(Math.random() * keys.length);
+      random = Math.floor(Math.random() * keyIndexes);
     }
     const property = keys[random];
     const value = values[random];
+    console.log("values", value);
     setAnswer(value);
     return { name: name, topic: property, answer: value };
   }
+
   function excludePeriod(keys) {
-    const num = Math.floor(Math.random() * keys.length);
-    return num === 3 ? excludePeriod(keys) : num;
+    const num = Math.floor(Math.random() * keys);
+    return num === 3 || num === 6 ? excludePeriod(keys) : num;
   }
 
   function writeQuestion(questiondata) {
@@ -313,11 +324,15 @@ function Quiz() {
     // setCorrect(false);
   }
   useEffect(() => {
-    processLocation();
+    // processLocation();
+    console.log(data, "hello");
     const set = getDinoSet();
+    console.log(set, "hello");
     setDinoSet(set);
     const dino = getDino(set);
+    console.log(dino, "hello");
     const qnData = getQuestionData(dino);
+
     writeQuestion(qnData);
     writeOption(qnData);
   }, []);

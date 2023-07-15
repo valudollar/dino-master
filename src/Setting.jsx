@@ -8,7 +8,7 @@ function Setting() {
   const [period, setPeriod] = useState("");
   const [difficulty, setDifficulty] = useState("");
   const [ready, setReady] = useState(false);
-  const questionNumberOptions = ["5", "10", "20", "50"];
+  const questionNumberOptions = ["5", "10", "20"];
   const periodOptions = ["Triassic", "Jurassic", "Cretaceous", "All"];
   const difficultyOptions = ["Easy", "Normal", "Hard"];
   const [numberSelected, setnumberSelected] = useState(false);
