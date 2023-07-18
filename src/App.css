@@ -160,5 +160,9 @@ h1 {
   margin: 0rem;
 }
 
-@media screen and (max-width: 600px) {
+@media screen and (min-width: 1400px) {
+  .gifcontainer {
+    height: 20rem;
+    width: 20rem;
+  }
 }
