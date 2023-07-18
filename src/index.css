@@ -27,7 +27,7 @@ html {
   -webkit-text-size-adjust: 100%;
   text-align: center;
   /* min-height: 100vh; */
-  overflow-y: scroll;
+  overflow-y: hidden;
 
   /* display: flex;
     flex-direction: column;
