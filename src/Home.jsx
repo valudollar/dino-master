@@ -1,6 +1,7 @@
 import { useLocation, useNavigate } from "react-router-dom";
 import stego from "./assets/stego.gif";
 import trike from "./assets/trike.gif";
+import pete from "./assets/pete.gif";
 
 function Home() {
   const navigate = useNavigate();
@@ -35,7 +36,7 @@ function Home() {
             <h3 className="badgeText">APPRENTICE</h3>
           </div>
           <div>
-            <img className="gifcontainer" src={trike}></img>
+            <img className="gifcontainer" src={pete}></img>
             <h3 className="badgeText">EXPERT</h3>
           </div>
           <div>
