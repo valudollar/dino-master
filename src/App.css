@@ -158,11 +158,12 @@ h1 {
   align-items: center;
   background-color: #e6a970;
   margin: 0rem;
+  display: -webkit-flex;
 }
 
 @media screen and (min-width: 1400px) {
   .gifcontainer {
-    height: 20rem;
-    width: 20rem;
+    height: 15rem;
+    width: 15rem;
   }
 }
