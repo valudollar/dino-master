@@ -56,8 +56,7 @@ function Setting() {
   }, [ready]);
 
   return (
-    // <>
-    <body>
+    <>
       <header className="">
         <h1 className="">DINO MASTER</h1>
         <h4>The realest Dino Quiz you can find. </h4>
@@ -109,8 +108,7 @@ function Setting() {
           Start
         </button>
       </section>
-    </body>
-    // </>
+    </>
   );
 }
 

@@ -8,7 +8,7 @@ function Home() {
     navigate("/setting");
   }
   return (
-    <body>
+    <>
       <header className="">
         <h1 className="">DINO MASTER</h1>
         <h4>The realest Dino Quiz you can find. </h4>
@@ -47,7 +47,7 @@ function Home() {
           Play
         </button>
       </section>
-    </body>
+    </>
   );
 }
 

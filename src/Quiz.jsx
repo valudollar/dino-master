@@ -287,7 +287,7 @@ function Quiz() {
   }, []);
 
   return (
-    <body>
+    <>
       <header className="">
         <h1>DINO MASTER</h1>
       </header>
@@ -339,7 +339,7 @@ function Quiz() {
           Next
         </button>
       </section>
-    </body>
+    </>
   );
 }
 

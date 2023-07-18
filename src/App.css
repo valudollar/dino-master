@@ -8,6 +8,7 @@
 }
 .badgeText {
   margin: 0rem;
+  color: #a73a1f;
 }
 
 .homeText {
@@ -148,12 +149,14 @@ h1 {
 }
 
 .contentSection {
-  max-width: 95vw;
+  /* max-width: 95vw; */
   flex-wrap: wrap;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  background-color: #e6a970;
+  margin: 0rem;
 }
 
 @media screen and (max-width: 600px) {
