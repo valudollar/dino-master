@@ -8,9 +8,9 @@
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   -webkit-text-size-adjust: 100%;
-  display: flex;
+  /* display: flex;
   flex-direction: column;
-  align-items: center;
+  align-items: center; */
 }
 html {
   background-color: #e6a970;
@@ -20,12 +20,12 @@ html {
   padding: 0px;
 } */
 
-body {
+/* body {
   display: flex;
   flex-direction: column;
   align-items: center;
   background-color: #e6a970;
-}
+} */
 
 @font-face {
   font-family: "Dinosaur";

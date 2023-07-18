@@ -1,6 +1,6 @@
 #root {
   text-align: center;
-  min-height: 100vh;
+  /* min-height: 100vh; */
   background-color: #e6a970;
   overflow-y: scroll;
 }
