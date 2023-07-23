@@ -64,7 +64,7 @@ function Result() {
           <h3>You got {percent}% of the questions correct!</h3>
           <h2>{comment}</h2>
           <h3>Title: {title}</h3>
-          <img className="titlecontainer" src={src} onClick={check}></img>
+          <img className="titlecontainer" src={src}></img>
           <a href="/">
             <button className="button">Try Again</button>
           </a>
