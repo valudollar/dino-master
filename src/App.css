@@ -11,7 +11,20 @@
   margin: 0rem;
   color: #a73a1f;
 }
+.titlecontainer {
+  height: 16rem;
+  width: 20rem;
+  margin: 0rem;
+  border-radius: 50%;
+  object-fit: cover;
+}
+.resultSection {
+  display: flex;
 
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
 .homeText {
   margin: 0rem;
 }
